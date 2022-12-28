@@ -1,0 +1,33 @@
+<h1>Sign up</h1>
+
+<% if@user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count,"error") %> prohibited this <%= @user.name %> from being saved:</h2>
+    <ul>
+    <% @user.errors.full_messages.each do |message| %>
+     <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= form_with(model: @user,local:true ) do |f| %>
+  <%= f.label :"名前" %>
+  <%= f.text_field :name %>
+<br>
+  <%= f.label :"メールアドレス" %>
+  <%= f.email_field :email %>
+<br>
+  <%= f.label :"プロフィール画像"%>
+  <%= image_tag(@user.image.url) if @user.image && @user.image.url %>
+  <%= f.file_field :image %>
+  <%= f.hidden_field :image_cache %>
+<br>
+  <%= f.label :"パスワード" %>
+  <%= f.password_field :password %>
+<br>  
+  <%= f.label :"パスワード(確認用)" %>
+  <%= f.password_field :password_confirmation %>
+<br>
+  <%= f.submit"アカウント作成" %>
+<br>  
+  <% end %>

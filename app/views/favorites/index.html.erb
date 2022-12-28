@@ -1,0 +1,30 @@
+<h1>お気に入り一覧画面</h1>
+
+<h2>ログインユーザー名:<%= @current_user.name %></h2>
+
+<p id="notice"><%= notice %></p>
+
+<h1><%= current_user.name %>のお気に入り一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>お気に入り画像一覧</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @favorites.each do |favorite| %>
+      <tr>
+      <td>お気に入り画像</td>
+      <td><%= image_tag favorite.blog.image.url, width: '10%', height: '10%' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '戻る', blogs_path %>
+<%= link_to '新規投稿', new_blog_path %>
