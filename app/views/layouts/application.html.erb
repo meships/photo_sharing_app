@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <header class="header">
+    <h1>写真</h1>
+    </header>
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
@@ -25,4 +28,9 @@
 
     <%= yield %>
   </body>
+
+  <footer class="footer">
+  <h1>写真だよ</h1>
+  </footer>
+
 </html>
