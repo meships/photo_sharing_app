@@ -56,3 +56,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'rexml'
+
+gem 'dotenv-rails'
