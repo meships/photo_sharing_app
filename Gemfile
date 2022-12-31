@@ -62,3 +62,5 @@ gem 'dotenv-rails'
 gem 'net-smtp'
 gem 'net-imap'
 gem 'net-pop'
+
+gem 'faker'
