@@ -11,26 +11,27 @@
   </head>
 
   <body>
-    <header class="header">
-    <h1>写真</h1>
-    </header>
-    <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, class: "#{key}") %>
-    <% end %>
+    <div class="wrapper">
+      <header class="header">
+        <h1>写真</h1>
+      </header>
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
 
-    <% if logged_in? %>
-      <%= link_to "Profile", user_path(current_user.id) %>
-      <%= link_to "Logout", session_path(current_user.id), method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_path %>
-      <%= link_to "Login", new_session_path %>
-    <% end %>
+      <% if logged_in? %>
+        <%= link_to "Profile", user_path(current_user.id) %>
+        <%= link_to "Logout", session_path(current_user.id), method: :delete %>
+      <% else %>
+        <%= link_to "Sign up", new_user_path %>
+        <%= link_to "Login", new_session_path %>
+      <% end %>
+      <%= yield %>
 
-    <%= yield %>
+      <footer class="footer">
+        <p1>写真だよ</p1>
+      </footer>
+    </div>  
   </body>
-
-  <footer class="footer">
-  <h1>写真だよ</h1>
-  </footer>
 
 </html>

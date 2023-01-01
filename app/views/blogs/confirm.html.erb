@@ -7,8 +7,8 @@
 
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
-  <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>
-  <%= form.submit  "登録する" %>
+  <%= image_tag(@blog.image.url, class: "icon") if @blog.image && @blog.image.url %>
+  <br><%= form.submit  "登録する" %></br>
 
-  <%= form.submit "戻る", name: 'back' %>
+  <br><%= form.submit "戻る", name: 'back' %></br>
 <% end %>

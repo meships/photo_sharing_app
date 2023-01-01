@@ -24,12 +24,12 @@
   <div class="field">
     <%= form.label :"画像" %>
     <br>
-    <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>
-    <%= form.file_field :image %>
-    <%= form.hidden_field :image_cache %>
+    <%= image_tag(@blog.image.url, class: "icon") if @blog.image && @blog.image.url %>
+    <br><%= form.file_field :image %></br>
+    <br><%= form.hidden_field :image_cache %></br>
   </div>
 
   <%= form.submit %>
 <% end %>
 
-<%= link_to "ブログ一覧画面にもどる", blogs_path %>
+<br><%= link_to "ブログ一覧画面にもどる", blogs_path %></br>

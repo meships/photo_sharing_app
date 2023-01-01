@@ -14,13 +14,23 @@
  *= require_self
  */
 
+ .wrapper{
+   min-height: 100vh;
+   position: relative;
+   padding-bottom: 60px;
+   box-sizing: border-box;
+ }
+
+ .icon{
+   height: 50%;
+   width: 50%;
+ }
+ 
  .header{
     background-color: #4d4d4d;
-    height: 50px;
-    width: 100%;
     color: white;
     text-align: center;
- }
+   }
 
  .footer{
     position: absolute;
@@ -30,5 +40,5 @@
     width: 100%;
     color: white;
     text-align: center;
-}
+   }
 

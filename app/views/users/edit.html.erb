@@ -10,19 +10,19 @@
       </ul>
     </div>
   <% end %>
-  <%= f.label :"名前" %>
-  <%= f.text_field :name %>
-  <%= f.label :"メールアドレス" %>
-  <%= f.email_field :email %>
+  <br><%= f.label :"名前" %></br>
+  <br><%= f.text_field :name %></br>
+  <br><%= f.label :"メールアドレス" %></br>
+  <br><%= f.email_field :email %></br>
   
-  <%= f.label :"プロフィール画像" %>
-  <%= image_tag(@user.image.url) if @user.image && @user.image.url %>
-  <%= f.file_field :image %>
-  <%= f.hidden_field :image_cache %>
-  <%= f.label :"パスワード" %>
-  <%= f.password_field :password %>
-  <%= f.label :"パスワード(確認用)" %>
-  <%= f.password_field :password_confirmation %>
+  <br><%= f.label :"プロフィール画像" %></br>
+  <br><%= image_tag(@user.image.url, class: "icon") if @user.image && @user.image.url %><br>
+  <br><%= f.file_field :image %></br>
+  <br><%= f.hidden_field :image_cache %></br>
+  <br><%= f.label :"パスワード" %></br>
+  <br><%= f.password_field :password %></br>
+  <br><%= f.label :"パスワード(確認用)" %></br>
+  <br><%= f.password_field :password_confirmation %></br>
   
   <div class="submit_record">
     <p><%= f.submit "情報変更" %></p>
