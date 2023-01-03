@@ -13,11 +13,4 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by(id: session[:user_id])
   end
 
-  #def autheniticate_user
-    #if @current_user == nill
-      #flash[:notice] = "ログインが必要です"
-      #redirect_to new_session_path
-    #end
-  #end
-
 end
