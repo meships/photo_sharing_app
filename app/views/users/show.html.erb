@@ -4,10 +4,11 @@
 
 <strong>画像:</strong>
 
-<p><%= image_tag @user.image.url if @user.image && @user.image.url %></p>
+<p><%= image_tag @user.image.url, width: '50%', height: '50%' if @user.image && @user.image.url %></p>
 
-
-<%= link_to 'プロフィール編集する', edit_user_path(@user.id) %>
+<% if @user.id == current_user.id %>
+    <%= link_to 'プロフィール編集する', edit_user_path(@user.id) %>
+<% end %>
 <%= link_to '新しくブログを投稿する',new_blog_path %>
 <%= link_to "ブログ一覧画面に戻る",blogs_path %>
 <%= link_to "お気に入り一覧画面に戻る",favorites_path %>
