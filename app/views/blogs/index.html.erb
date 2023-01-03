@@ -14,7 +14,7 @@
       <td><%= blog.title %></td>
       <td><%= blog.content %></td>
       <td><%= blog.user.name %></td>
-      <td><%= image_tag blog.image.to_s, width: '10%', height: '10%' %></td>
+      <td><%= image_tag blog.image.url %></td>
 
       <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
       <% if blog.user == current_user %>
