@@ -8,5 +8,5 @@ Rails.application.routes.draw do
       post :confirm
     end
   end
-  mount LetterOpenerWeb::Engine, at: "/inbox" if Rails.env.development?
+  mount LetterOpenerWeb::Engine, at: "/inbox"
 end

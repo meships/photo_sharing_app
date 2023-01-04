@@ -35,7 +35,6 @@ group :development do
 
   gem 'spring'
   
-  gem 'letter_opener_web'
 end
 
 group :test do
@@ -64,3 +63,5 @@ gem 'net-imap'
 gem 'net-pop'
 
 gem 'faker'
+
+gem 'letter_opener_web'
